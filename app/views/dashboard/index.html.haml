@@ -1,1 +1,23 @@
-%h1 hello
+%body{:onload => ""}
+  .row
+    .col.s10.offset-s1.l6.offset-l3.center.z-depth-3.teal.darken-1
+      %h3 Drink and Thrive!
+  .row.calculator
+    .col.s10.offset-s1.l6.offset-l3.grey.draken-2.center.z-depth-3
+      %h3.grey.lighten-1 Drinking session has begun! 
+      %button#add_drink.btn.center add a drink
+      .grey.lighten-1
+        %h3 BAC
+        %p Current Blood Alcohol Content
+      %h3.lable#output 0.00
+      .grey.lighten-1
+        %h3 Time Until Sober
+        %p Time remaining until your BAC reaches 0.08
+      %h3#sober_clock 00:00
+      .grey.lighten-1 
+        %h3 Total Drinks
+      %h3#total_drinks 0
+  = react_component "Users"
+  .row.calculator.center
+    %a.btn{:href =>"http://www.wikihow.com/Calculate-Blood-Alcohol-Content-(Widmark-Formula)"} Formulas Used
+    
